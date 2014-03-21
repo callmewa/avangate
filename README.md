@@ -11,11 +11,7 @@ The secret key in this example is: AABBCCDDEEFF
 For this example, the response is built in the same way, only using shorter data formats for date values. 
 HMAC source string is built from the following:
 
-Field name
-
-Length
-
-Field value
+Field name, Length, Field value
 
 IPN_PID[0]
 
