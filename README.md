@@ -5,7 +5,6 @@ Nodejs Avangate IPN confirmation
 
 all relevant documentation can be found in [lib/ipn.js]
 
-<blockquote>
 
 <code>
 The secret key in this example is: AABBCCDDEEFF
@@ -59,4 +58,3 @@ If the string above is valid, and acknowledged by Avangate, the notification is 
 Contrary to this situation, the IPN notification will be re-sent at increasing time intervals, until successfully confirmed. Also, an error notification will be displayed in the Control Panel Dashboard area.
 
 </code>
-</blockquote>
