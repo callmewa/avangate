@@ -1,0 +1,25 @@
+{
+  "name": "avangate-ipn-confirm",
+  "preferGlobal": true,
+  "version": "0.1.0",
+  "author": "Wa <callmewa@gmail.com>",
+  "description": "avangate ipn confirmation for nodejs",
+  "contributors": [
+    {}
+  ],
+  "bin": {
+  },
+  "scripts": {},
+  "main": ".",
+  "repository": {},
+  "keywords": [
+    "ipn avangate"
+  ],
+  "dependencies": {
+    "moment": "~2.5.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  }
+}
