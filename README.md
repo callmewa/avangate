@@ -6,7 +6,7 @@ Nodejs Avangate IPN confirmation
 all relevant documentation can be found in [lib/ipn.js]
 
 
-<code>
+
 The secret key in this example is: AABBCCDDEEFF
 For this example, the response is built in the same way, only using shorter data formats for date values. 
 HMAC source string is built from the following:
@@ -57,4 +57,3 @@ If the string above is valid, and acknowledged by Avangate, the notification is 
 
 Contrary to this situation, the IPN notification will be re-sent at increasing time intervals, until successfully confirmed. Also, an error notification will be displayed in the Control Panel Dashboard area.
 
-</code>
