@@ -3,6 +3,14 @@ avangate
 
 Nodejs Avangate IPN confirmation
 
+Usage:
+
+```node
+var ipn = require("avangate")
+    .initWithKey("YOUR SECRET KEY");
+```
+
+
 all relevant documentation can be found in [lib/ipn.js]
 
 
