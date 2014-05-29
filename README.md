@@ -9,6 +9,17 @@ Usage:
 var ipn = require("avangate")
     .initWithKey("YOUR SECRET KEY");
 
+// ipn directly extends [EventEmitter](http://nodejs.org/api/events.html#events_class_events_eventemitter)
+// add a handler for validated IPNs
+ipn.on(ipn.EVENTS.VALIDATED,
+  //ipn handler Call Back
+  function(ipn){
+    console.log(ipn);
+  });
+
+//confirm the avangate IPN
+ipn.confirmIpn(req, res);
+
 ```
 
 Sample Express usage for Avangate IPN confirmation
@@ -20,6 +31,7 @@ router.post('/', ipn.confirmIpn);
 
 
 all relevant documentation can be found in [lib/ipn.js]
+Checkout test/ipn_server.js for an working example
 
 
 
