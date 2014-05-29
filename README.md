@@ -8,6 +8,14 @@ Usage:
 ```node
 var ipn = require("avangate")
     .initWithKey("YOUR SECRET KEY");
+
+```
+
+Sample Express usage for Avangate IPN confirmation
+
+```node
+var router = express.Router();
+router.post('/', ipn.confirmIpn);
 ```
 
 
