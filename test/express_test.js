@@ -12,7 +12,7 @@ var app = express();
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({type:"application/x-www-form-urlencoded"}));
+app.use(bodyParser.urlencoded());
 
 app.post('/', ipn.confirmIpn);
 app.listen(8888);
