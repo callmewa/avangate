@@ -1,7 +1,7 @@
 {
   "name": "avangate",
   "preferGlobal": false,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Wa <callmewa@gmail.com>",
   "description": "avangate ipn confirmation for nodejs",
   "contributors": [
@@ -10,8 +10,9 @@
   "bin": {},
   "scripts": {},
   "main": "lib/ipn.js",
-  "repository": { "type" : "git"
-    , "url" : "https://github.com/callmewa/avangate"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callmewa/avangate"
   },
   "keywords": [
     "ipn avangate"
@@ -23,5 +24,9 @@
   "engines": {
     "node": ">=0.8"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "express": "~4.3.2",
+    "request": "~2.36.0",
+    "body-parser": "~1.2.2"
+  }
 }
