@@ -24,11 +24,9 @@ ipn.confirmIpn(req, res);
 
 Sample Express usage for Avangate IPN confirmation
 
-#2
 
-**Avangate IPN url-encoded Hash calculation is not compatible with the `bodyparser` module, so DON'T use it for the confirmation URL **
-
-`bodyparser` skips empty elements for arrays.  This will always result in the incorrect MD5 hash.
+**Avangate IPN url-encoded Hash calculation is not compatible with the `bodyparser` module, so DON'T use it for the confirmation URL.  [See Issue](https://github.com/callmewa/avangate/issues/2)** 
+`bodyparser` skips empty elements for arrays.  The hash method expects 0 byte string for those elements.  This will always result in the incorrect MD5 hash.
 
 ```node
 var router = express.Router();
