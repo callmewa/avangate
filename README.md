@@ -25,12 +25,21 @@ ipn.confirmIpn(req, res);
 Sample Express usage for Avangate IPN confirmation
 
 
-**Avangate IPN url-encoded Hash calculation is not compatible with the `bodyparser` module, so DON'T use it for the confirmation URL.  [See Issue](https://github.com/callmewa/avangate/issues/2)** 
-`bodyparser` skips empty elements for arrays.  The hash method expects 0 byte string for those elements.  This will always result in the incorrect MD5 hash.
-
 ```node
-var router = express.Router();
-router.post('/', ipn.confirmIpn);
+//This requires body-parse version > 1.2.2
+var express = require('express');
+var ipn = require('../lib/ipn').initWithKey("YOUR SECRET KEY");
+var app = express();
+
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+//NOTE: this tells bodyParser to use the querystring modules instead of qs module
+// this is required to parse Avangate IPNS
+app.use(bodyParser.urlencoded({extended:false}));
+
+app.post('/', ipn.confirmIpn);
+app.listen(8888);
 ```
 
 

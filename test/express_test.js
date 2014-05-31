@@ -6,13 +6,13 @@
  */
 var express = require('express');
 var request = require('request');
-var ipn = require('../lib/ipn').initWithKey("YOUR_SECRET_KEY");;
+var ipn = require('../lib/ipn').initWithKey("YOUR_SECRET_KEY");
 var app = express();
 
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.post('/', ipn.confirmIpn);
 app.listen(8888);
