@@ -1,7 +1,7 @@
 {
   "name": "avangate",
   "preferGlobal": false,
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "Wa <callmewa@gmail.com>",
   "description": "avangate ipn confirmation for nodejs",
   "contributors": [

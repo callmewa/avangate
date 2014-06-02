@@ -12,10 +12,16 @@ var ipn = require("avangate")
 // ipn directly extends [EventEmitter](http://nodejs.org/api/events.html#events_class_events_eventemitter)
 // add a handler for validated IPNs
 ipn.on(ipn.EVENTS.VALIDATED,
-  //ipn handler Call Back
   function(ipn){
-    console.log(ipn);
+    console.log("Validate:\n" + JSON.stringify(ipn, null, 2));
   });
+
+// add handler for rejected IPNs
+ipn.on(ipn.EVENTS.REJECTED,
+  function(ipn){
+    console.log("Rejected:\n" + JSON.stringify(ipn, null, 2));
+  });
+
 
 //confirm the avangate IPN
 ipn.confirmIpn(req, res);
@@ -43,8 +49,8 @@ app.listen(8888);
 ```
 
 
-all relevant documentation can be found in [lib/ipn.js]
-Checkout test/ipn_server.js for an working example
+additional relevant documentation can be found in [lib/ipn.js]
+Checkout [samples/ipn_server.js] and [[test/express_test.js] ] for an working examples
 
 
 

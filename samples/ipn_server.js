@@ -15,7 +15,13 @@ var ipn = require('../lib/ipn').initWithKey("YOUR_SECRET_KEY");
 // add handler for Validated IPNs
 ipn.on(ipn.EVENTS.VALIDATED,
   function(ipn){
-    console.log(ipn);
+    console.log("Validate:\n" + JSON.stringify(ipn, null, 2));
+  });
+
+// add handler for rejected IPNs
+ipn.on(ipn.EVENTS.REJECTED,
+  function(ipn){
+    console.log("Rejected:\n" + JSON.stringify(ipn, null, 2));
   });
 
 exports.app = function(req, res){
